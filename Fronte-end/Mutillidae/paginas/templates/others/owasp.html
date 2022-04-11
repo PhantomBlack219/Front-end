@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% load static %}
+{% block headers %}
+<title>OWASP</title>
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"/>
+    {% endblock %}
+    {% block content %} 
+
+    
+<section class="py-5 bg-light" id="scroll-target">
+    <div class="container px-6 my-6">
+        <div class=" py-7 "  style="border-radius: 0%;">
+            <div class="container px-5 my-5">
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-10 col-xl-7">
+                        <div class="text-center">
+                            <div class="fs-4 mb-4 fst-italic"> <h3 class="display-4 fw-bolder mb-2 text-center" style="color: #D98814;">{{ object.nombre}} {{ object.año}}</h3></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <header class="py-5">
+            <div class="container px-5">
+                <div class="row gx-5 align-items-center justify-content-center">
+                    <div class="col-lg-8 col-xl-7 col-xxl-6">
+                        <div class="my-5 text-center text-xl-start" >
+                            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">                        
+                                <img src="{% static 'css/OWASP.png' %}" width="500" height="500" alt="">  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center">
+                        
+                        <div class="my-5 text-center text-xl-start">
+                            <p class="lead fw-normal  mb-4" >
+                                The Open Web Application Security Project® (OWASP) is a nonprofit foundation that works to improve the security of software. 
+                                Through community-led open-source software projects, hundreds of local chapters worldwide, tens of thousands of members, and leading educational and training conferences, the OWASP Foundation is the source for developers and technologists to secure the web.
+                            </p>
+                            <ul> 
+                                <li>and Resources</li>
+                                <li>Community and Networking</li>
+                                <li>Education & Training</li>
+                            </ul>
+                            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start"> 
+                        </div>
+                    
+                </div>
+            </div>
+        </header>
+        <div class="row gx-5" >
+            {% for au in listaA %}  
+            <div class="col-lg-4 mb-5" display = "inline">
+                <div>
+                    <div class="card-body p-4">
+                            <div class="h5 card-title mb-3"><h3 class="fw-bolder mx-auto" text align="center">
+                                {{ au.get_indiceA}}</h3> <h4 style="color: black;" text align="center">{{ au.get_nombreA}}
+                      </div></a>&nbsp;
+     
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+</div>
+    </div>
+</section>
+{% endblock %}

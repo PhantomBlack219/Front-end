@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+{% block headers %}
+<title>VIEW LOG</title>
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"/>
+{%endblock%}
+{% block content %}
+<section class="py-5 bg-light" id="scroll-target">
+<div class="container px-6 my-6">
+    <div class=" py-7 "  style="border-radius: 0%;">
+        <div class="container px-5 my-5">
+            <div class="row gx-5 justify-content-center">
+                <div class="col-lg-10 col-xl-7">
+                    <div class="text-center">
+                        <div class="fs-4 mb-4 fst-italic"> <h3 class="display-4 fw-bolder mb-2 text-center" style="color: #D98814;">LOGS</h3></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <table class="table table-light">
+        <thead>
+          <tr>
+            <th colspan="7"scope="col" text>log records found</th>
+          </tr>
+          <th>
+            <th scope="col">hostname</th>
+            <th>ip</th>
+            <th>Client Port</th>
+            <th>Browser Agent</th>
+            <th>Message</th>
+            <th>Date/Time</th>
+          </tr>
+          <tbody>
+        </tbody>
+      </table>
+</section>
+    {%endblock%}

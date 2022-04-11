@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block headers %}
+    <title>Mutillidae</title>
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    {% endblock %}
+
+{% block content %}
+<header class="bg-dark py-5">
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center justify-content-center">
+            <div class="col-lg-8 col-xl-7 col-xxl-6">
+                <div class="my-5 text-center text-xl-start" >
+                    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">                        
+                        <a class="btn btn-lg px-4 me-sm-3 col -6" id="colores" href=""><h4>Optional Configuration</h4></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center" id="colores">
+                
+                <div class="my-5 text-center text-xl-start">
+                    <h1 class="display-5 fw-bolder text-white mb-2 text-center">Top Menu Bar</h1>
+                    <p class="lead fw-normal text-white-50 mb-4 text-center" >
+                        <h4>Logo:</h4> Takes user to Home page<br>
+                        <h4>Login/Logout:</h4> Takes user to Login page<br>
+                        <h4>Hints:</h4> Shows the Hints on vulnerable pages<br>
+                        <h4>View Log:</h4> Takes the user to view the log<br>
+                        <h4>View Captured Data:</h4> Takes the user to the view the captured data</p>
+                        <h4>OWASP: show the vulnerabilities in secctions</h4>
+                    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start"> 
+                </div>
+            
+        </div>
+    </div>
+</header>
+
+
+<!-- Testimonial section-->
+<div class=" py-5 " id="colores"  style="border-radius: 0%;">
+    <div class="container px-5 my-5">
+        <div class="row gx-5 justify-content-center">
+            <div class="col-lg-10 col-xl-7">
+                <div class="text-center">
+                    <div class="fs-4 mb-4 fst-italic"> <h1 class="display-5 fw-bolder text-white mb-2 text-center">Left Menu Bar</h1>
+
+                        Some vulnerabilities will be in more than one category as there is overlap between categories. 
+                        Each page in Mutillidae will expose multiple vulnerabilities. 
+                        Some pages have half a dozen and/or multiple critical vulnerabilities on the same page. The page will appear in the menu under each vulnerability.
+                        
+                        A listing of vulnerabilities is available there and you have the possibility to check once you complete or hack them</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="py-5 bg-dark">
+    <div class="container px-5 my-5">
+        <div class="text-center">
+            <h2 class="fw-bolder"></h2>
+            <p class="lead fw-normal text-muted mb-5"></p>
+        </div>
+        <div class="row gx-5 row-cols-1 row-cols-sm-6 row-cols-xl-4 justify-content-center">
+          
+    </div>    
+</section>
+
+
+{% endblock %}
